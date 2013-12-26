@@ -21,6 +21,11 @@
 
 #import "MMDrawerBarButtonItem.h"
 
+// Fix compatibility of Xcode 4.x
+#ifndef NSFoundationVersionNumber_iOS_6_1
+#define NSFoundationVersionNumber_iOS_6_1 993.00
+#endif
+
 @interface MMDrawerMenuButtonView : UIButton
 @property (nonatomic,strong) UIColor * menuButtonNormalColor;
 @property (nonatomic,strong) UIColor * menuButtonHighlightedColor;
